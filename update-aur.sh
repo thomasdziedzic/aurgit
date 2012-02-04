@@ -28,7 +28,7 @@ while read line; do
       #echo updated
       rm -rf ${match}
       mkdir ${match}
-      bsdtar -s ',.*/,,p' -C ${match} -xf $AURTEST/${match}.tar.gz
+      bsdtar -s ',.*/,,' -C ${match} -xf $AURTEST/${match}.tar.gz
     fi
   fi
 done < /tmp/rlog
